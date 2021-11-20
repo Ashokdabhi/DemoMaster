@@ -33,7 +33,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
-    //Rcycleview and CardView
+    //RecycleView and CardView
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
     implementation 'androidx.cardview:cardview:1.0.0'
 
@@ -48,7 +48,7 @@ dependencies {
     //Login with face Book
     implementation 'com.facebook.android:facebook-android-sdk:5.12.1'
 
-    //Runtime parmishan Dexter
+    //Runtime Permissions Dexter
     implementation 'com.karumi:dexter:6.1.2'
 
     //Google map
