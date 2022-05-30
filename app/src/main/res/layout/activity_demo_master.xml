@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".demo_master.DemoMasterActivity">
+
+    <include
+        android:id="@+id/toolbare"
+        layout="@layout/toolbare" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/btn_RecyleViewStatick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="RecyleViewStatick"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_RecyleViewList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="RecyleViewAPIList"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_ApiRecycleview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="RecyleViewAPITextSetData"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_Piramind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="piramind"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_Facbook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Facebook"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_runtime_Permishan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Run Time Permishan"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_Notifiation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Notifiation"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_GoogleMap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="GoogleMap"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_Sql_Database"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="SQL DATA Base"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_room"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Rom Data Base"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

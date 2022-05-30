@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".facebook.FaceAtivity">
+    tools:context=".demo_master.facebook.FaceAtivity">
 
     <com.facebook.login.widget.LoginButton
         android:id="@+id/login_button"
