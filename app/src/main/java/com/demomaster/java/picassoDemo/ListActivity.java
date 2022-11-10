@@ -1,13 +1,16 @@
-package com.demomaster.demo_master.RecycleApiCall;
+package com.demomaster.java.picassoDemo;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.demomaster.R;
 
@@ -24,22 +27,29 @@ import retrofit2.Retrofit;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class ListActivity extends AppCompatActivity {
-    private RecyclerView recyclerView;
-    private ProgressDialog dialog;
+    private RecyclerView rvImageDemo;
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
-        dialog = new ProgressDialog(ListActivity.this);
-        recyclerView = (RecyclerView) findViewById(R.id.recycler);
+
+        Toolbar toolbar = findViewById(R.id.toolBare);
+        setSupportActionBar(toolbar);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setTitle(getResources().getString(R.string.picasso_load_image));
+
+        }
+        toolbar.setNavigationOnClickListener(v -> onBackPressed());
+
+        progressBar = findViewById(R.id.progressBar);
+        rvImageDemo = findViewById(R.id.rvImageDemo);
         fetchJSON();
     }
 
     private void fetchJSON() {
-        dialog.setMessage("Doing something, please wait.");
-        dialog.setCancelable(false);
-        dialog.show();
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(RecyclerInterface.JSONURL)
                 .addConverterFactory(ScalarsConverterFactory.create())
@@ -52,19 +62,12 @@ public class ListActivity extends AppCompatActivity {
 
         call.enqueue(new Callback<String>() {
             @Override
-            public void onResponse(Call<String> call, Response<String> response) {
-                if (dialog.isShowing()) {
-                    dialog.dismiss();
-                }
-                Log.i("Responsestring", response.body().toString());
-                //Toast.makeText()
+            public void onResponse(@NonNull Call<String> call, @NonNull Response<String> response) {
+                progressBar.setVisibility(View.GONE);
                 if (response.isSuccessful()) {
                     if (response.body() != null) {
-                        Log.i("onSuccess", response.body().toString());
-
-                        String jsonresponse = response.body().toString();
+                        String jsonresponse = response.body();
                         writeRecycler(jsonresponse);
-
                     } else {
                         Log.i("onEmptyResponse", "Returned empty response");//Toast.makeText(getContext(),"Nothing returned",Toast.LENGTH_LONG).show();
                     }
@@ -72,8 +75,8 @@ public class ListActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<String> call, Throwable t) {
-
+            public void onFailure(@NonNull Call<String> call, @NonNull Throwable t) {
+                progressBar.setVisibility(View.GONE);
             }
         });
     }
@@ -90,6 +93,7 @@ public class ListActivity extends AppCompatActivity {
 
                 for (int i = 0; i < dataArray.length(); i++) {
 
+
                     ModelRecycler modelRecycler = new ModelRecycler();
                     JSONObject dataobj = dataArray.getJSONObject(i);
 
@@ -103,8 +107,8 @@ public class ListActivity extends AppCompatActivity {
                 }
 
                 RetrofitAdapter retrofitAdapter = new RetrofitAdapter(this, modelRecyclerArrayList);
-                recyclerView.setAdapter(retrofitAdapter);
-                recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false));
+                rvImageDemo.setAdapter(retrofitAdapter);
+                rvImageDemo.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false));
 
             } else {
                 Toast.makeText(ListActivity.this, obj.optString("message") + "", Toast.LENGTH_SHORT).show();

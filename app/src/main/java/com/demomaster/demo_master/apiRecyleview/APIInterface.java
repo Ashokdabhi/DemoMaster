@@ -16,8 +16,6 @@ interface APIInterface {
 
    @FormUrlEncoded
     @POST("/api/users")
-//    Call<User> createUser(@Body User user);
-//    Call<User> createUser(@FieldMap Map<String, String> fields);
     Call<User> createUser(@Field("name") String name,
                           @Field("job") String job);
 

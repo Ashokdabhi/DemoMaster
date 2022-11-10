@@ -1,6 +1,7 @@
-package com.demomaster.demo_master.staticrv;
+package com.demomaster.java.staticrv;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -19,6 +20,14 @@ public class StatickRVActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_statick_rv);
+
+        Toolbar toolbar = findViewById(R.id.toolBare);
+        setSupportActionBar(toolbar);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+        toolbar.setNavigationOnClickListener(v -> onBackPressed());
+
         nameList.add("Test");
         nameList.add("Demo");
         nameList.add("TestDemo");
@@ -36,11 +45,12 @@ public class StatickRVActivity extends AppCompatActivity {
         nameList.add("DemoTest");
         nameList.add("DemoTest");
         nameList.add("DemoTest");
-        RecyclerView rv_statick = (RecyclerView) findViewById(R.id.rv_statick);
+
+        RecyclerView rvStatic = findViewById(R.id.rvStatic);
         LinearLayoutManager layoutManager = new LinearLayoutManager(StatickRVActivity.this);
-        rv_statick.setLayoutManager(layoutManager);
+        rvStatic.setLayoutManager(layoutManager);
         RVAdpter adpter = new RVAdpter(nameList);
-        rv_statick.setAdapter(adpter);
-        adpter.notifyDataSetChanged();
+        rvStatic.setAdapter(adpter);
+
     }
 }

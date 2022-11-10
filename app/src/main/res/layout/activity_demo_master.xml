@@ -4,11 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".demo_master.DemoMasterActivity">
+    tools:context=".java.MainJavaActivity">
 
     <include
-        android:id="@+id/toolbare"
-        layout="@layout/toolbare" />
+        android:id="@+id/toolBare"
+        layout="@layout/tool_bare" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -22,19 +22,22 @@
 
 
             <Button
-                android:id="@+id/btn_RecyleViewStatick"
+                android:id="@+id/btnRecycleViewStatic"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="RecyleViewStatick"
+                android:textColor="@color/color_white"
+                android:background="@drawable/btn_bg"
+                android:text="@string/btn_RecycleViewStatic"
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/btn_RecyleViewList"
+                android:id="@+id/btnRecycleViewList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="RecyleViewAPIList"
+                android:textColor="@color/color_white"
+                android:background="@drawable/btn_bg"
                 android:textAllCaps="false" />
 
             <Button
@@ -42,16 +45,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:textColor="@color/color_white"
+                android:background="@drawable/btn_bg"
                 android:text="RecyleViewAPITextSetData"
                 android:textAllCaps="false" />
 
-            <Button
-                android:id="@+id/btn_Piramind"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="piramind"
-                android:textAllCaps="false" />
+
 
             <Button
                 android:id="@+id/btn_Facbook"
@@ -69,13 +68,7 @@
                 android:text="Run Time Permishan"
                 android:textAllCaps="false" />
 
-            <Button
-                android:id="@+id/btn_Notifiation"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Notifiation"
-                android:textAllCaps="false" />
+
 
             <Button
                 android:id="@+id/btn_GoogleMap"
@@ -93,13 +86,7 @@
                 android:text="SQL DATA Base"
                 android:textAllCaps="false" />
 
-            <Button
-                android:id="@+id/btn_room"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Rom Data Base"
-                android:textAllCaps="false" />
+
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

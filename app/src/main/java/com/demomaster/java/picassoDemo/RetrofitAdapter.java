@@ -1,4 +1,4 @@
-package com.demomaster.demo_master.RecycleApiCall;
+package com.demomaster.java.picassoDemo;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -29,7 +29,7 @@ public class RetrofitAdapter extends RecyclerView.Adapter<RetrofitAdapter.MyView
     @NonNull
     @Override
     public RetrofitAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = inflater.inflate(R.layout.retro_item, parent, false);
+        View view = inflater.inflate(R.layout.live_item_view, parent, false);
         MyViewHolder holder = new MyViewHolder(view);
 
         return holder;

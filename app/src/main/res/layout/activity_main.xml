@@ -1,21 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".DasBoardActivity">
 
     <include
-        android:id="@+id/toolbare"
-        layout="@layout/toolbare" />
+        android:id="@+id/toolBare"
+        layout="@layout/tool_bare"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnDemoMaster"
+        android:id="@+id/btnJava"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Demo Master"
-        android:textAllCaps="false" />
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/btn_bg"
+        android:text="@string/btn_java"
+        android:textAllCaps="false"
+        android:textColor="@color/color_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</LinearLayout>
+    <Button
+        android:id="@+id/btnKotlin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/btn_bg"
+        android:textAllCaps="false"
+        android:text="@string/btn_kotlin"
+        android:textColor="@color/color_white"
+        app:layout_constraintEnd_toEndOf="@+id/btnJava"
+        app:layout_constraintStart_toStartOf="@+id/btnJava"
+        app:layout_constraintTop_toBottomOf="@+id/btnJava" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

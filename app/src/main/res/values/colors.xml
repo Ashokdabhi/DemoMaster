@@ -8,4 +8,5 @@
     <color name="permission_granted">#28B463</color>
     <color name="permission_denied">#E59866</color>
     <color name="permission_denied_permanent">#E74C3C</color>
+    <color name="blue">#0B1AF3</color>
 </resources>

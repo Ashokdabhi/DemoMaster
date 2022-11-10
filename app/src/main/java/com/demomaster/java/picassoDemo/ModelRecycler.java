@@ -1,4 +1,4 @@
-package com.demomaster.demo_master.RecycleApiCall;
+package com.demomaster.java.picassoDemo;
 
 public class ModelRecycler {
 

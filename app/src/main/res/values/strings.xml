@@ -2,4 +2,14 @@
     <string name="app_name">DemoMaster</string>
     <string name="facebook_app_id">452401149018531</string>
     <string name="fb_login_protocol_scheme">fb452401149018531</string>
+    <string name="btn_java">Java</string>
+    <string name="btn_kotlin">Kotlin</string>
+    <string name="btn_RecycleViewStatic">RecycleViewStatic</string>
+    <string name="btn_RecycleViewAPIList">RecycleViewAPIList</string>
+    <string name="picasso_load_image">Picasso Load Image</string>
+    <string name="glide_load_image">Glide Load Image</string>
+    <string name="hint_name">Enter Name</string>
+    <string name="hint_job">Enter Job</string>
+    <string name="post_data">Post Data</string>
+    <string name="btn_submit">Submit</string>
 </resources>

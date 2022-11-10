@@ -1,4 +1,4 @@
-package com.demomaster.demo_master.staticrv;
+package com.demomaster.java.staticrv;
 
 import android.view.LayoutInflater;
 import android.view.View;

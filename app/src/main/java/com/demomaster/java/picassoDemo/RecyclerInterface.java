@@ -1,4 +1,4 @@
-package com.demomaster.demo_master.RecycleApiCall;
+package com.demomaster.java.picassoDemo;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
