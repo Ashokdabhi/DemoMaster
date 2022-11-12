@@ -12,4 +12,8 @@
     <string name="hint_job">Enter Job</string>
     <string name="post_data">Post Data</string>
     <string name="btn_submit">Submit</string>
+    <string name="name_label">Name :</string>
+    <string name="job_label">Job :</string>
+    <string name="id_label">ID :</string>
+    <string name="date_label">Date :</string>
 </resources>

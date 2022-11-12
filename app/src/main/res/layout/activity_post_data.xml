@@ -58,23 +58,111 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:textColor="@color/color_white"
         android:background="@drawable/btn_bg"
         android:text="@string/btn_submit"
         android:textAllCaps="false"
+        android:textColor="@color/color_white"
         app:layout_constraintEnd_toEndOf="@+id/tilName"
         app:layout_constraintStart_toStartOf="@+id/tilName"
-        app:layout_constraintTop_toBottomOf="@+id/tilJob"/>
+        app:layout_constraintTop_toBottomOf="@+id/tilJob" />
 
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        app:layout_constraintTop_toBottomOf="@+id/toolBare"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolBare" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutOutPut"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/tilName"
+        app:layout_constraintStart_toStartOf="@+id/tilName"
+        app:layout_constraintTop_toBottomOf="@+id/btnSubmit">
+
+        <TextView
+            android:id="@+id/txtNameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name_label"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="@+id/txtNameLabel"
+            app:layout_constraintStart_toEndOf="@+id/txtNameLabel"
+            app:layout_constraintTop_toTopOf="@+id/txtNameLabel" />
+
+        <TextView
+            android:id="@+id/txtJobLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/job_label"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/txtNameLabel"
+            app:layout_constraintTop_toBottomOf="@+id/txtNameLabel" />
+
+        <TextView
+            android:id="@+id/txtJob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="@+id/txtJobLabel"
+            app:layout_constraintStart_toStartOf="@+id/txtName"
+            app:layout_constraintTop_toTopOf="@+id/txtJobLabel" />
+
+        <TextView
+            android:id="@+id/txtIdLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/id_label"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/txtNameLabel"
+            app:layout_constraintTop_toBottomOf="@+id/txtJobLabel" />
+
+        <TextView
+            android:id="@+id/txtId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="@+id/txtIdLabel"
+            app:layout_constraintStart_toStartOf="@+id/txtName"
+            app:layout_constraintTop_toTopOf="@+id/txtIdLabel" />
+
+        <TextView
+            android:id="@+id/txtDateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/date_label"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/txtNameLabel"
+            app:layout_constraintTop_toBottomOf="@+id/txtIdLabel" />
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="@+id/txtDateLabel"
+            app:layout_constraintStart_toStartOf="@+id/txtName"
+            app:layout_constraintTop_toTopOf="@+id/txtDateLabel" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
